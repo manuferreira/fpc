@@ -5,7 +5,7 @@ clean_expression = [i for i in expression if i in '([{)]}']
 def casamento_perfeito(clean_expression):
     stack = []
 
-    for i in clean_expression:
+    for i in clean_expression: #seria legal usar um while aqui e uma variavel booleana pra conferir se o casamento foi imperfeito, pq dai evitaria de usar return, o professor disse q n era bom
         if i in "([{":
             stack.append(i)
 
@@ -33,6 +33,8 @@ def casamento_perfeito(clean_expression):
 
 
 def delimiters(opened, closed):
+    #n precisava conferir isso tudo aqui nao
+    # if (opened == "(" and closed == ")") or (demais...): return True, else: return False
     list_opened = '([{'
     list_closed = ')]}'
 
